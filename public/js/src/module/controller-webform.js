@@ -218,7 +218,8 @@ function _submitRecord() {
 
     record = {
         'xml': form.getDataStr(),
-        'files': fileManager.getCurrentFiles()
+        'files': fileManager.getCurrentFiles(),
+        'instanceId': form.getInstanceID()
     };
 
     return connection.uploadRecord( record )
